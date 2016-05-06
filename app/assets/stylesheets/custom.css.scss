@@ -19,6 +19,20 @@ input, textarea, select, .uneditable-input {
 input {
   height: auto !important;
 }
+#error_explanation{
+  color: red;
+}
+
+.error_count{
+  font-weight: bold;
+}
+
+.field_with_errors {
+  @extend .has-error;
+  .form-control {
+    color: $state-danger-text;
+  }
+}
 
 footer {
   margin-top: 45px;
