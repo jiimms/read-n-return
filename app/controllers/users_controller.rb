@@ -1,6 +1,8 @@
 class UsersController < ApplicationController
+  skip_before_action :check_session, :only => [:new, :create, :log_in]
   def new
   	@user = User.new
+    @count= User.count
   end
 
   def show
