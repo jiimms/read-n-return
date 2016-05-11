@@ -9,7 +9,8 @@ Rails.application.routes.draw do
   get "page" => 'static_pages#page'
 
   get 'signup' => 'users#new'
-
+  get 'index' => 'users#index'
+  get "users/:id", to: "users#show", as: "profile"
   get 'login' => 'sessions#new'
   post 'login' => 'sessions#create'
   delete 'logout' => 'sessions#destroy'

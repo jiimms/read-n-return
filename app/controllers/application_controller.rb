@@ -4,6 +4,7 @@ class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
   include SessionsHelper
   before_action :check_session 
+  
   def check_session
   	if session[:user_id].blank?
   		flash[:danger] ="Please Login or Sign up to access this page"
